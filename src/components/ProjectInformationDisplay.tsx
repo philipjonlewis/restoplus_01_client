@@ -53,15 +53,27 @@ const ProjectInformationDisplay = () => {
           </li>
         </ul>
       </div>
-      <div className="flex my-4 justify-start items-center hover:bg-blue-700 bg-blue-500 w-fit p-2 py-4 rounded-lg">
-        <GitHubIcon />{' '}
-        <a
-          className="pl-2 cursor-pointer"
-          target="_blank"
-          href="https://github.com/philipjonlewis/restoplus_01"
-        >
-          Project Repo
-        </a>
+      <div className="flex gap-4 my-4 justify-start items-center  w-fit  ">
+        <div className="hover:bg-blue-700 bg-blue-500 flex items-center p-2 rounded-lg">
+          <GitHubIcon />{' '}
+          <a
+            className="pl-2 cursor-pointer"
+            target="_blank"
+            href="https://github.com/philipjonlewis/restoplus_01_client"
+          >
+            Front End Repo
+          </a>
+        </div>
+        <div className="hover:bg-purple-700 bg-purple-500 flex items-center p-2 rounded-lg">
+          <GitHubIcon />{' '}
+          <a
+            className="pl-2 cursor-pointer"
+            target="_blank"
+            href="https://github.com/philipjonlewis/restoplus_01_server"
+          >
+            Back End Repo
+          </a>
+        </div>
       </div>
       <div className="w-fit">
         <p className="text-xl font-bold">Tech Stack</p>
@@ -80,6 +92,14 @@ const ProjectInformationDisplay = () => {
             <p>Typescript</p>
             <p>Node + Express</p>
             <p>MongoDB + Mongoose</p>
+          </div>
+        </div>
+        <div className="pl-2 mt-2">
+          <p className="text-sm font-bold mb-1">Deployment</p>
+          <div className="pl-2 text-xs">
+            <p>Front End - Netlify</p>
+            <p>Back End - Heroku</p>
+            <p>Database - MongoDB Atlas</p>
           </div>
         </div>
       </div>
