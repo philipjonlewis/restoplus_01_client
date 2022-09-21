@@ -23,7 +23,7 @@ const CounterPage = () => {
   useEffect(() => {
     const getCookieId = async () => {
       const { data: cookieData } = await axios.get(
-        'http://192.168.0.25:4000/restoplus/api_v1/cookie_id'
+        'https://restoplusmongodb.herokuapp.com/restoplus/api_v1/cookie_id'
       );
 
       if (cookieData.code == 200) {
@@ -33,7 +33,7 @@ const CounterPage = () => {
 
     const getCountData = async () => {
       const { data: countData } = await axios.get(
-        `http://192.168.0.25:4000/restoplus/api_v1/count_value?_id=${Cookies.get(
+        `https://restoplusmongodb.herokuapp.com/restoplus/api_v1/count_value?_id=${Cookies.get(
           'cookie_id'
         )}`
       );
@@ -59,7 +59,7 @@ const CounterPage = () => {
 
   const postData = async (count_value: number) => {
     const response = await axios.post(
-      'http://192.168.0.25:4000/restoplus/api_v1/count_value',
+      'https://restoplusmongodb.herokuapp.com/restoplus/api_v1/count_value',
       { _id: Cookies.get('cookie_id'), count_value: count_value }
     );
 
