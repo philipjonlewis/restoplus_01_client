@@ -1,9 +1,18 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 
 const Counter = ({ isLoading }) => {
   // throw new Error();
   const { countValue } = useSelector((state) => state.count);
+  const [loadingMessage, setLoadingMessage] = useState('Loading...');
+
+  useEffect(() => {
+    setTimeout(() => {
+      if (isLoading) {
+        setLoadingMessage('Something wrong with the database');
+      }
+    }, 5000);
+  }, []);
 
   return (
     <div className="flex flex-col justify-center">
@@ -20,7 +29,10 @@ const Counter = ({ isLoading }) => {
             countValue.toFixed(2)
           )
         ) : (
-          <p className="text-xs">Getting data from server...</p>
+          <div className="flex flex-col justify-start items-center">
+            <img src="/Ripple.gif" className="h-12" alt="" />
+            <p className="text-xs">{loadingMessage}</p>
+          </div>
         )}
       </div>
     </div>

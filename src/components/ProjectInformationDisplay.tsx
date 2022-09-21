@@ -32,7 +32,7 @@ const ProjectInformationDisplay = () => {
           </a>
         </div>
       </div>
-      <div>
+      <div className="hidden lg:block">
         <p className="text-lg font-bold pb-4">Challenge 01 Criteria</p>
         <ul className="text-sm flex flex-col gap-4 border-b-[1px] w-fit mb-4 pb-4">
           <li>
@@ -53,7 +53,7 @@ const ProjectInformationDisplay = () => {
           </li>
         </ul>
       </div>
-      <div className="flex gap-4 my-4 justify-start items-center  w-fit  ">
+      <div className="hidden lg:flex gap-4 my-4 justify-start items-center  w-fit  ">
         <div className="hover:bg-blue-700 bg-blue-500 flex items-center p-2 rounded-lg">
           <GitHubIcon />{' '}
           <a
@@ -75,7 +75,7 @@ const ProjectInformationDisplay = () => {
           </a>
         </div>
       </div>
-      <div className="w-fit">
+      <div className="w-fit hidden lg:block">
         <p className="text-xl font-bold">Tech Stack</p>
         <div className="pl-2">
           <p className="text-sm font-bold mb-1">Front End</p>
