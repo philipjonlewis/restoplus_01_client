@@ -13,9 +13,14 @@ Counter app with database parsing through MongoDB
 
 ### [Project Link](https://lewisrestoplusmongodb.netlify.app/)
 
+## Deployed Prototype Video Dropbox Link
+
+### [Deployed Prototype](https://www.youtube.com/watch?v=ZcQyJ-gxke0&list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu)
+
 ## Project Repository
 
 ### [Front End](https://github.com/philipjonlewis/restoplus_01_client)
+
 ### [Back End](https://github.com/philipjonlewis/restoplus_01_server)
 
 ## Tech Stack
