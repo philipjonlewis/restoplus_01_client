@@ -15,7 +15,7 @@ Counter app with database parsing through MongoDB
 
 ## Deployed Prototype Video Dropbox Link
 
-### [Deployed Prototype](https://www.youtube.com/watch?v=ZcQyJ-gxke0&list=PL4cUxeGkcC9jx2TTZk3IGWKSbtugYdrlu)
+### [Deployed Prototype](https://www.dropbox.com/s/k8pdg2eh12afv56/lewis_restoplus_mongodb.mov?dl=0)
 
 ## Project Repository
 
