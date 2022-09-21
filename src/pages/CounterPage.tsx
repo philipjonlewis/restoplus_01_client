@@ -3,6 +3,7 @@ import Counter from '../components/Counter';
 import { ToastContainer, toast } from 'react-toastify';
 import { useDispatch } from 'react-redux';
 import { ErrorBoundary } from 'react-error-boundary';
+import { config } from '../config';
 
 import {
   countIncrement,
@@ -23,7 +24,7 @@ const CounterPage = () => {
   useEffect(() => {
     const getCookieId = async () => {
       const { data: cookieData } = await axios.get(
-        'https://restoplusmongodb.herokuapp.com/restoplus/api_v1/cookie_id'
+        `${config.backendURL}restoplus/api_v1/cookie_id`
       );
 
       if (cookieData.code == 200) {
@@ -33,7 +34,7 @@ const CounterPage = () => {
 
     const getCountData = async () => {
       const { data: countData } = await axios.get(
-        `https://restoplusmongodb.herokuapp.com/restoplus/api_v1/count_value?_id=${Cookies.get(
+        `${config.backendURL}restoplus/api_v1/count_value?_id=${Cookies.get(
           'cookie_id'
         )}`
       );
@@ -59,8 +60,11 @@ const CounterPage = () => {
 
   const postData = async (count_value: number) => {
     const response = await axios.post(
-      'https://restoplusmongodb.herokuapp.com/restoplus/api_v1/count_value',
-      { _id: Cookies.get('cookie_id'), count_value: count_value }
+      `${config.backendURL}restoplus/api_v1/count_value`,
+      {
+        _id: Cookies.get('cookie_id'),
+        count_value: count_value,
+      }
     );
 
     if (response.status !== 200) {
